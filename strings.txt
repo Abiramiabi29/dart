@@ -1,0 +1,32 @@
+void main(){
+  //strings
+  var x="Don't do \n this";
+  print(x);
+  x=r"Don't do \n this";
+  //immutability
+  print(x);
+  const f=12.85;
+  print(f);
+  
+  final n1="Abi";
+  final String n2="preethi";
+  print("$n1 and $n2 are friends"); 
+  
+  //nullability
+  //int n=null;  -> null,non-nullable types cannot have null values
+  int? n=null; //-> add ? after the type
+  print(n);
+  int? n3;
+  print(n3);
+  
+  //null-aware
+  var h="HEY";
+  var d= h??"none!";
+  print(d); //HEY
+  
+  var i;
+  var e= i??"none!";
+  print(e);
+  var w="ohh";
+  print(i?.w);
+}

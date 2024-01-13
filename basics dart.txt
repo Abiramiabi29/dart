@@ -1,0 +1,14 @@
+void main() {
+  //variables and print statements
+  var x=10;
+  var y=20;
+  print(x+y);
+  //x=10.5; //error,cannot change
+  //print(x);
+  int z=28;
+  print(z);
+  dynamic w="hey";
+  print(w);
+  w=10; //no error,can change
+  print(w);
+}

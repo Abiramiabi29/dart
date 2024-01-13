@@ -1,0 +1,12 @@
+//operators
+void main(){
+  print(40/2);
+  var age=18;
+  print(age==18);
+  print(age!=18);
+  print(age<12);
+  print(age>12);
+  print(age>=58);
+  age++;
+  print(age);
+}
