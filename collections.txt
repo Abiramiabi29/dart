@@ -1,0 +1,28 @@
+void main(){
+    //lists
+  List s=[1,2,3];
+  print(s);
+  final x=["hey",8,9.7];
+  print(x);
+  x.add("jj");
+  print(x);
+  x[0]="hi";
+  print(x);
+  // for in loop
+  List sub=["eng","tamil","maths","science"];
+  for(String subjects in sub){
+      print(subjects);
+  }
+  //maps
+  Map <String,int> marks ={
+      "english":92,
+      "tamil":97,
+      "maths":80,
+      "science":85,
+  };
+  dynamic m = marks["tamil"]; //final / var/dynamic
+  print(m);
+  
+  marks["social"]=97;
+  print(marks);
+}
