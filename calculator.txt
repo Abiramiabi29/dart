@@ -1,0 +1,62 @@
+import 'dart:io';
+import 'dart:math';
+
+int numInput(){
+  print("Enter the number:");
+  int n1=int.parse(stdin.readLineSync()!);
+  return n1;
+}
+String operand() {
+  print("Enter the operand (+,-,/,*)");
+  String operandinput=stdin.readLineSync() !;
+  return operandinput;
+}
+String checkpalindrome(int answer){
+   int ans=answer;
+    int remainder=0;
+    int rev=0;
+    while(answer!=0){
+        remainder=answer%10;
+        rev=rev*10+remainder;
+        answer=answer~/10;
+    }
+    if(ans==rev){
+        return "It is a palindrome number";
+    }
+    else{
+        return "It is not a palindome number";
+    }
+}
+void main(){
+try{
+  int num1=numInput();
+  int num2=numInput();
+  String operandchoice=operand();
+  int answer=0;
+  
+  if(operandchoice=="+"){
+    answer=num1+num2;
+  }
+  else if(operandchoice=="-"){
+    answer=num1-num2;
+  }
+  else if(operandchoice=="/"){
+    answer=num1~/num2;
+  }
+  else if(operandchoice=="*"){
+    answer=num1*num2;
+  }
+  else{
+    print("invalid choice");
+  }
+  print("${num1} ${operandchoice} ${num2} = ${answer}");
+  String palindrome=checkpalindrome(answer);
+  print(palindrome);
+  
+  
+}
+catch(FormatException){
+    print("Wrong input,please check the number");
+}
+}
+
